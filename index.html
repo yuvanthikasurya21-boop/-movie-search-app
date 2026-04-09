@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>🍿 Welcome to Movie Explorer</h1>
+      <p>Find top-rated movies, explore genres, and build your own watchlist!</p>
+      <button id="themeToggle">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- Controls -->
+  <section class="controls">
+    <div class="btn-group">
+      <button class="primary-btn" id="randomMovieBtn">🎲 Random Movie</button>
+      <button class="primary-btn" id="sortBtn" data-sorted="false">⭐ Sort by Rating</button>
+    </div>
+
+    <div class="searchWrapper">
+      <input type="text" id="searchInput" placeholder="Search movies...">
+      <button class="search-btn" id="searchBtn">🔍</button>
+    </div>
+
+    <div class="filters">
+      <div class="genreWrapper">
+        <span>Genres:</span>
+        <button class="genre-btn" data-genre="Action">💥 Action</button>
+        <button class="genre-btn" data-genre="Comedy">😂 Comedy</button>
+        <button class="genre-btn" data-genre="Drama">🎭 Drama</button>
+        <button class="genre-btn" data-genre="Thriller">🕵️ Thriller</button>
+        <button class="genre-btn" data-genre="Romance">❤️ Romance</button>
+        <button class="genre-btn" data-genre="Sci‑Fi">🚀 Sci‑Fi</button>
+      </div>
+
+      <select id="languageSelect">
+        <option value="all">All Languages</option>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Tamil">Tamil</option>
+        <option value="Telugu">Telugu</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Movie Grid -->
+  <main id="movieContainer" class="movie-grid"></main>
+
+  <!-- Favorites -->
+  <section class="favorites-section">
+    <h2>Your Favorites</h2>
+    <div id="favoritesContainer" class="movie-grid"></div>
+  </section>
+
+  <!-- Modal -->
+  <div id="movieModal" class="modal">
+    <div class="modal-content">
+      <span class="closeBtn">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
